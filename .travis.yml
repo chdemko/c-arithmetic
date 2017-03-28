@@ -12,17 +12,16 @@ install:
   - gem install coveralls-lcov
 
 before_script:
+  - mkdir build
+  - cd build
   - lcov --directory . --zerocounters
  
 script:
-  - mkdir build
-  - cd build
   - cmake .. -DUSE_GCOV=1
   - make
   - make test
 
 after_success:
-  - cd build
   - lcov --directory src --capture --output-file coverage.info
   - coveralls-lcov coverage.info
 
