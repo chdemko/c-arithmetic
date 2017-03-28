@@ -13,7 +13,6 @@
 # $ lcov --directory src --capture --output-file my_prog.info
 # $ genhtml --output-directory coverage   --demangle-cpp --num-spaces 2 --sort   --title "My Program's Test Coverage"   --function-coverage --branch-coverage --legend   my_prog.info
 
-
 cmake_minimum_required(VERSION 2.6)
 
 project(Arithmetic C)
