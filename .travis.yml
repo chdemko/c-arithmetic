@@ -1,11 +1,14 @@
 language: c
 
+compiler:
+  - gcc
+
 branches:
   only:
   - master
 
-before_script:
-  - pip3 install --user cpp-coveralls
+before_install:
+  - pip install --user cpp-coveralls
 
 script:
   - mkdir build
