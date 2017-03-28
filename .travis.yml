@@ -4,10 +4,16 @@ branches:
   only:
   - master
 
+before_script:
+  - pip install --user cpp-coveralls
+
 script:
   - mkdir build
   - cd build
   - cmake .. -DUSE_GCOV=1
   - make
   - make test
+
+after_success:
+  - coveralls --root src/
 
