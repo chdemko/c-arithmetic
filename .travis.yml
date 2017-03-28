@@ -23,7 +23,7 @@ script:
 
 after_success:
   - cd ..
-  - lcov --directory src --base-directory  --capture --output-file coverage.info
+  - lcov --directory build/src --base-directory  --capture --output-file coverage.info
   - sed -i 's#'`pwd`'/##g' coverage.info
   - coveralls-lcov coverage.info
 
