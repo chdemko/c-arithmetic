@@ -18,5 +18,5 @@ script:
   - make test
 
 after_success:
-  - coveralls --root src/
+  - python3 `which coveralls` --root src/
 
