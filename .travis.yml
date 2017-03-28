@@ -8,6 +8,7 @@ branches:
   - master
 
 install:
+  - sudo apt-get install lcov
   - gem install coveralls-lcov
 
 before_script:
