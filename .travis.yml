@@ -5,7 +5,7 @@ branches:
   - master
 
 before_script:
-  - pip install --user cpp-coveralls
+  - pip3 install --user cpp-coveralls
 
 script:
   - mkdir build
