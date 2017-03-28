@@ -7,9 +7,12 @@ branches:
   only:
   - master
 
-before_install:
-  - pip install --user cpp-coveralls
+install:
+  - gem install coveralls-lcov
 
+before_script:
+  - lcov --directory . --zerocounters
+ 
 script:
   - mkdir build
   - cd build
@@ -18,5 +21,7 @@ script:
   - make test
 
 after_success:
-  - python3 `which coveralls` --root src/
+  - cd build
+  - lcov --directory src --capture --output-file coverage.info
+  - coveralls-lcov coverage.info
 
