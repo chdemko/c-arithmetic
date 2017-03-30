@@ -1,0 +1,16 @@
+language: c
+
+compiler:
+  - gcc
+
+branches:
+  only:
+  - master
+
+script:
+  - mkdir build
+  - cd build
+  - cmake .. -DUSE_GCOV=1
+  - make
+  - make test
+
