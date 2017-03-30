@@ -10,7 +10,7 @@ branches:
 script:
   - mkdir build
   - cd build
-  - cmake .. -DUSE_GCOV=1
+  - cmake .. -DUSE_COV=1
   - make
   - make test
 
