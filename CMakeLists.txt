@@ -1,12 +1,3 @@
-# $ cmake /path/to/source -DUSE_GCOV=1
-# $ lcov --zerocounters  --directory src
-# $ make test
-# $ lcov --directory src --capture --output-file coverage.info
-# $ coveralls-lcov --repo-token "YOUR TOKEN" coverage.info
-# ou sur travis
-# coveralls-lcov coverage.info
-# $ genhtml --output-directory coverage   --demangle-cpp --num-spaces 2 --sort   --title "My Program's Test Coverage"   --function-coverage --branch-coverage --legend   coverage.info
-
 cmake_minimum_required(VERSION 2.6)
 
 project(Arithmetic C)
