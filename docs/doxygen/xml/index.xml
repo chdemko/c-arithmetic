@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
-  <compound refid="arithmetic_8h" kind="file"><name>arithmetic.h</name>
-    <member refid="arithmetic_8h_1abc1a25fc06e8ebb18e730bf74fa39d1b" kind="function"><name>arithmetic_gcd</name></member>
-  </compound>
-</doxygenindex>
