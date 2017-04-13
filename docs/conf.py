@@ -5,7 +5,6 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
 
     subprocess.call('cd ../src; doxygen', shell=True)
-    # subprocess.call('breathe-apidoc -o api doxygen/xml/', shell=True)
 
 from recommonmark.parser import CommonMarkParser
 

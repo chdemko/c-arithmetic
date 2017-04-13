@@ -1,10 +1,5 @@
 find_program(HTML_COVERAGE_EXECUTABLE genhtml)
 mark_as_advanced(HTML_COVERAGE_EXECUTABLE)
-if (HTML_COVERAGE_EXECUTABLE)
-	option(BUILD_HTML_COVERAGE "Generating HTML coverage")
-	mark_as_advanced(BUILD_HTML_COVERAGE)
-endif()
-
-
-
+CMAKE_DEPENDENT_OPTION(BUILD_HTML_COVERAGE "Enabling html coverage" OFF "BUILD_COVERAGE;HTML_COVERAGE_EXECUTABLE" OFF)
+mark_as_advanced(BUILD_HTML_COVERAGE)
 

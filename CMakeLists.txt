@@ -1,31 +1,19 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.0)
 
-project(Arithmetic C)
+project(Arithmetic VERSION 0.0.1 LANGUAGES C)
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
-
-find_package(Coverage)
-if (COVERAGE_EXECUTABLE AND BUILD_COVERAGE)
-	add_custom_target(coverage
-		${COVERAGE_EXECUTABLE}
-			--base-directory "${CMAKE_CURRENT_SOURCE_DIR}"
-			--directory src/CMakeFiles/arithmetic.dir
-			--capture --output-file coverage.info
-			--quiet
-		COMMENT "Building coverage info"
-		VERBATIM
-	)
-endif()
+include(CMakeDependentOption)
 
 find_package(HtmlCoverage)
-if (HTML_COVERAGE_EXECUTABLE AND BUILD_HTML_COVERAGE)
+if (BUILD_HTML_COVERAGE)
 	add_custom_target(html-coverage
 		${HTML_COVERAGE_EXECUTABLE}
 			--output-directory coverage
 			--demangle-cpp
 			--num-spaces 2
 			--sort
-			--title "My Program's Test Coverage"
+			--title "${PROJECT_NAME} ${PROJECT_VERSION} Coverage"
 			--function-coverage
 			--branch-coverage
 			--legend
@@ -34,10 +22,14 @@ if (HTML_COVERAGE_EXECUTABLE AND BUILD_HTML_COVERAGE)
 		COMMENT "Building html coverage"
 		VERBATIM
 	)
+	add_custom_command(TARGET html-coverage POST_BUILD
+		COMMENT "HTML coverage is in coverage/index.html"
+	)
 endif()
 
 enable_testing()
 
 add_subdirectory(src)
 add_subdirectory(test)
+add_subdirectory(docs)
 
