@@ -5,7 +5,7 @@ read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
 if read_the_docs_build:
 
     subprocess.call('cd ../src; doxygen', shell=True)
-    subprocess.call('breathe-apidoc -o api doxygen/xml/', shell=True)
+    # subprocess.call('breathe-apidoc -o api doxygen/xml/', shell=True)
 
 from recommonmark.parser import CommonMarkParser
 
