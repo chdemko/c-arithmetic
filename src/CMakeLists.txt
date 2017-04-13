@@ -1,5 +1,3 @@
-cmake_minimum_required(VERSION 3.0)
-
 add_library(arithmetic SHARED arithmetic.c arithmetic.h)
 add_library(arithmeticStatic STATIC arithmetic.c arithmetic.h)
 
