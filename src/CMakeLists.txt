@@ -3,7 +3,7 @@ add_library(arithmeticStatic STATIC arithmetic.c arithmetic.h)
 
 set_target_properties (arithmetic
 	PROPERTIES
-		SOVERSION ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
+		SOVERSION ${PROJECT_VERSION_MAJOR}
 		VERSION ${PROJECT_VERSION}
 )
 
