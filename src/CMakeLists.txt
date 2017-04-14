@@ -26,20 +26,22 @@ install(
 )
 
 find_package(Coverage)
-if (BUILD_COVERAGE)
+
+if(BUILD_COVERAGE)
 	add_custom_target(coverage
 		${COVERAGE_EXECUTABLE}
-			--directory ${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/arithmetic.dir
+			--directory ${CMAKE_CURRENT_BINARY_DIR}
 			--capture
-			--output-file ${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/arithmetic.dir/coverage.info
+			--output-file ${CMAKE_CURRENT_BINARY_DIR}/coverage.info
 			--quiet
+		DEPENDS check
 		COMMENT "Building coverage info"
 		VERBATIM
 	)
 	add_custom_command(TARGET coverage POST_BUILD
 		COMMAND
 			${COVERAGE_EXECUTABLE}
-				--add-tracefile ${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/arithmetic.dir/coverage.info
+				--add-tracefile ${CMAKE_CURRENT_BINARY_DIR}/coverage.info
 				--output-file ${CMAKE_BINARY_DIR}/coverage.info
 				--quiet
 	)

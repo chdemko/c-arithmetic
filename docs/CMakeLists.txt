@@ -1,24 +1,25 @@
 find_package(Sphinx)
 
-if(NOT DEFINED SPHINX_THEME)
-    set(SPHINX_THEME default)
-endif()
-
-if(NOT DEFINED SPHINX_THEME_DIR)
-    set(SPHINX_THEME_DIR)
-endif()
-
-set(SPHINX_MAN_DIR "${CMAKE_BINARY_DIR}/html")
-
-add_custom_target(docs COMMAND
-	${SPHINX_EXECUTABLE}
-		-b html
-		-c ${CMAKE_CURRENT_SOURCE_DIR}
-		"${CMAKE_CURRENT_SOURCE_DIR}"
-		"${SPHINX_MAN_DIR}"
+add_custom_target(docs
+	COMMAND
+		${SPHINX_EXECUTABLE}
+			-q
+			-b html
+			"${CMAKE_CURRENT_BINARY_DIR}/docs"
+			"${CMAKE_BINARY_DIR}/html"
 	COMMENT "Building HTML documentation with Sphinx."
 )
 
+add_custom_command(TARGET docs PRE_BUILD
+	COMMAND
+		${CMAKE_COMMAND} -E make_directory "${CMAKE_CURRENT_BINARY_DIR}/src"
+	COMMAND
+		${CMAKE_COMMAND} -E make_directory "${CMAKE_CURRENT_BINARY_DIR}/docs"
+	COMMAND
+		${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/src" "${CMAKE_CURRENT_BINARY_DIR}/src"
+	COMMAND
+		${CMAKE_COMMAND} -E copy_directory "${CMAKE_SOURCE_DIR}/docs" "${CMAKE_CURRENT_BINARY_DIR}/docs"
+)
 add_custom_command(TARGET docs POST_BUILD
-	COMMENT "HTML documentation is in docs/html."
+	COMMENT "HTML documentation is in ${CMAKE_BINARY_DIR}/html"
 )

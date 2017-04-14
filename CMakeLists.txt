@@ -11,7 +11,7 @@ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 include(CMakeDependentOption)
 
 find_package(HtmlCoverage)
-if (BUILD_HTML_COVERAGE)
+if(BUILD_HTML_COVERAGE)
 	add_custom_target(html-coverage
 		${HTML_COVERAGE_EXECUTABLE}
 			--output-directory coverage
@@ -24,11 +24,12 @@ if (BUILD_HTML_COVERAGE)
 			--legend
 			--quiet
 			coverage.info
+		DEPENDS coverage
 		COMMENT "Building html coverage"
 		VERBATIM
 	)
 	add_custom_command(TARGET html-coverage POST_BUILD
-		COMMENT "HTML coverage is in coverage/index.html"
+		COMMENT "HTML coverage is in ${CMAKE_BINARY_DIR}/coverage"
 	)
 endif()
 

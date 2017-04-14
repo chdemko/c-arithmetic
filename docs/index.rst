@@ -12,13 +12,6 @@ Welcome to c-test's documentation!
 
 .. doxygenfunction:: arithmetic_gcd
 
-.. toctree::
-   :maxdepth: 2
-   :caption: API
-   
-   api/filelist
-
-
 Indices and tables
 ==================
 
