@@ -16,7 +16,7 @@ before_script:
   - cd build
  
 script:
-  - cmake .. -DBUILD_COVERAGE=1 -DBUILD_HTML_COVERAGE=1
+  - cmake .. -DBUILD_COVERAGE=1
   - make
   - make test
   - make coverage
