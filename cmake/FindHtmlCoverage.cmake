@@ -17,7 +17,7 @@ function(enable_html_coverage)
 			    --branch-coverage
 			    --legend
 			    --quiet
-			    coverage.info
+			    "${CMAKE_BINARY_DIR}/coverage.info"
 		    DEPENDS coverage
 		    COMMENT "Building html coverage"
 		    VERBATIM
