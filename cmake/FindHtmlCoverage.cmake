@@ -8,7 +8,7 @@ function(enable_html_coverage)
     if(BUILD_HTML_COVERAGE)
 	    add_custom_target(html-coverage
 		    ${HTML_COVERAGE_EXECUTABLE}
-			    --output-directory coverage
+			    --output-directory "${CMAKE_BINARY_DIR}/coverage"
 			    --demangle-cpp
 			    --num-spaces 2
 			    --sort
