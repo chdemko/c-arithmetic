@@ -4,6 +4,7 @@ compiler:
   - gcc
 
 branches:
+
   only:
   - master
 
@@ -16,7 +17,7 @@ before_script:
   - cd build
  
 script:
-  - cmake .. -DBUILD_COVERAGE=1
+  - cmake .. -DBUILD_COVERAGE=1 -DTEST_VALGRIND=1
   - make
   - make test
   - make coverage

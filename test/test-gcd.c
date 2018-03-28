@@ -5,7 +5,7 @@
 #endif
 #include <assert.h>
 
-#include "../src/arithmetic.h"
+#include <arithmetic/arithmetic.h>
 
 int main(void)
 {
