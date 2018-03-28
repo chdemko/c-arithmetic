@@ -28,6 +28,10 @@ function(enable_coverage)
 					--output-file ${CMAKE_BINARY_DIR}/coverage.info
 					--quiet
 		)
+		set_directory_properties(PROPERTIE
+        	ADDITIONAL_MAKE_CLEAN_FILES "${CMAKE_BINARY_DIR}/coverage.info;coverage.info"
+        )
+
 	endif()
 endfunction(enable_coverage)
 
