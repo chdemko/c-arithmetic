@@ -1,4 +1,8 @@
-import subprocess, os
+import subprocess, os, sys
+
+from os.path import expanduser
+
+sys.path.append( expanduser("~") + "/.local/lib/python3.6/site-packages/" )
 
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
