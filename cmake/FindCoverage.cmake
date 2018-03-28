@@ -18,7 +18,6 @@ function(enable_coverage)
 				--capture
 				--output-file ${CMAKE_CURRENT_BINARY_DIR}/coverage.info
 				--quiet
-			DEPENDS check
 			COMMENT "Building coverage info"
 			VERBATIM
 		)

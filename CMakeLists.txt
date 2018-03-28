@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 2.8)
 
 project(Arithmetic C)
 
+enable_testing()
+
 set(PROJECT_VERSION_MAJOR 0)
 set(PROJECT_VERSION_MINOR 0)
 set(PROJECT_VERSION_PATCH 1)
