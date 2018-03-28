@@ -10,7 +10,7 @@ Welcome to c-test's documentation!
    :maxdepth: 2
    :caption: Contents
 
-.. doxygenfunction:: arithmetic_gcd
+.. doxygenfile:: arithmetic.h
 
 Indices and tables
 ==================
