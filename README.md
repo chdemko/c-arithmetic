@@ -1,7 +1,6 @@
 c-test
 ======
 
-[![Travis](https://img.shields.io/travis/chdemko/c-test.svg)](http://travis-ci.org/chdemko/c-test)
-[![Coveralls](https://img.shields.io/coveralls/chdemko/c-test.svg)](https://coveralls.io/r/chdemko/c-test?branch=master)
-[![Documentation Status](https://readthedocs.org/projects/c-test/badge/?version=latest)](http://c-test.readthedocs.io/en/latest/?badge=latest)
-
+[![Build Status](https://travis-ci.com/zaneck/c-test.svg?branch=master)](https://travis-ci.com/zaneck/c-test)
+[![Coverage Status](https://coveralls.io/repos/github/zaneck/c-test/badge.svg)](https://coveralls.io/github/zaneck/c-test)
+[![Documentation Status](https://readthedocs.org/projects/c-test-more/badge/?version=latest)](https://c-test-more.readthedocs.io/en/latest/?badge=latest)
