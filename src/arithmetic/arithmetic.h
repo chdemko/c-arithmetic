@@ -1,4 +1,6 @@
 /**
+ * @file arithmetic.h
+ *
  * @author     Christophe Demko <chdemko@gmail.com>
  * @copyright  Copyright (C) 2017-2018 Christophe Demko. All rights reserved.
  *
