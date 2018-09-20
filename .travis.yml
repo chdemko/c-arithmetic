@@ -17,7 +17,7 @@ install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install lcov ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install valgrind ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then gem install coveralls-lcov ; fi
-  - pip install cpplint
+  - pip install --user cpplint
 
 before_script:
   - mkdir build
