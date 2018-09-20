@@ -2,7 +2,7 @@
  * @file arithmetic.h
  *
  * @author     Christophe Demko <chdemko@gmail.com>
- * @data       2017-2018
+ * @date       2017-2018
  * @copyright  BSD 3-Clause License
  *
  * This file is part of the c-test package https://github.com/chdemko/c-test
