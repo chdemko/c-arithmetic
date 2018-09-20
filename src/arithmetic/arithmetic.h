@@ -2,9 +2,8 @@
  * @file arithmetic.h
  *
  * @author     Christophe Demko <chdemko@gmail.com>
- * @copyright  Copyright (C) 2017-2018 Christophe Demko. All rights reserved.
- *
- * @license    BSD 3-Clause License
+ * @data       2017-2018
+ * @copyright  BSD 3-Clause License
  *
  * This file is part of the c-test package https://github.com/chdemko/c-test
  */
