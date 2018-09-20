@@ -13,26 +13,25 @@ branches:
   - master
 
 before_install:
-  - sudo pip install --upgrade pip
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo pip install --upgrade pip ; fi
 
 install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install lcov ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install valgrind ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then gem install coveralls-lcov ; fi
-  - sudo pip install cpplint
-
-before_script:
-  - mkdir build
-  - cd build
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; sudo pip install cpplint ; fi
 
 script:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; cpplint --repository=src/arithmetic/ src/arithmetic/*.c src/arithmetic/*.h ../test/arithmetic/*.c ; fi
+  - mkdir build
+  - cd build
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cmake .. -DBUILD_COVERAGE=1 -DTEST_VALGRIND=1 ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cmake .. ; fi
   - make
   - make test
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then make coverage  ; fi
-  - cpplint --repository=../src/arithmetic/ ../src/arithmetic/*.c ../src/arithmetic/*.h ../test/arithmetic/*.c
+  - cd ..
 
 after_success:
-  - cd ..
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then make coverage  ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then coveralls-lcov build/coverage.info  ; fi
+
