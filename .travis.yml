@@ -13,11 +13,14 @@ branches:
   only:
   - master
 
+before_install:
+  - pip install --upgrade pip
+
 install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install lcov ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install valgrind ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then gem install coveralls-lcov ; fi
-  - pip install --user cpplint
+  - python3 -m pip install cpplint
 
 before_script:
   - mkdir build
