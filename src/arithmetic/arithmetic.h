@@ -1,5 +1,14 @@
-#ifndef _ARITHMETIC_H_
-#define _ARITHMETIC_H_
+/**
+ * @author     Christophe Demko <chdemko@gmail.com>
+ * @copyright  Copyright (C) 2017-2018 Christophe Demko. All rights reserved.
+ *
+ * @license    BSD 3-Clause License
+ *
+ * This file is part of the c-test package https://github.com/chdemko/c-test
+ */
+
+#ifndef ARITHMETIC_H_
+#define ARITHMETIC_H_
 
 /**
  * arithmetic_gcd computes the Greatest Common Divisor of two positive integers.
@@ -21,5 +30,5 @@ extern unsigned int arithmetic_gcd(unsigned int a, unsigned int b);
  */
 extern unsigned int arithmetic_lcm(unsigned int a, unsigned int b);
 
-#endif				/* _ARITHMETIC_H_ */
+#endif  // ARITHMETIC_H_
 
