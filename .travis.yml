@@ -9,7 +9,6 @@ compiler:
   # will use clang on osx
 
 branches:
-
   only:
   - master
 
