@@ -31,7 +31,7 @@ script:
   - make
   - make test
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then make coverage  ; fi
-  - cpplint --repository=src/arithmetic/ src/arithmetic/*.c src/arithmetic/*.h 
+  - cpplint --repository=../src/arithmetic/ ../src/arithmetic/*.c ../src/arithmetic/*.h ../test/arithmetic/*.c
 
 after_success:
   - cd ..
