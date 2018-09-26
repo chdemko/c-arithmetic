@@ -1,38 +1,32 @@
 language: c
 
-os:
-  - linux
-  - osx
-
 compiler:
   - gcc
-  # will use clang on osx
 
 branches:
   only:
   - master
 
 before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo pip install --upgrade pip ; fi
+  - sudo pip install --upgrade pip
 
 install:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install lcov ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install valgrind ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install cppcheck ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then gem install coveralls-lcov ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo pip install cpplint ; fi
+  - sudo apt-get install lcov
+  - sudo apt-get install valgrind
+  - sudo apt-get install cppcheck
+  - gem install coveralls-lcov
+  - sudo pip install cpplint
 
 script:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cpplint --repository=src/arithmetic/ src/arithmetic/*.c src/arithmetic/*.h test/arithmetic/*.c ; fi
+  - cpplint --repository=src/arithmetic/ src/arithmetic/*.c src/arithmetic/*.h test/arithmetic/*.c ; fi
   - mkdir build
   - pushd build
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cmake .. -DBUILD_COVERAGE=1 -DTEST_VALGRIND=1 ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cmake .. -G "Unix Makefiles" ; fi
+  - cmake .. -DBUILD_COVERAGE=1 -DTEST_VALGRIND=1
   - make
   - make test
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then make coverage  ; fi
+  - make coverage
   - popd
 
 after_success:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then coveralls-lcov build/coverage.info  ; fi
+  - coveralls-lcov build/coverage.info
 
