@@ -3,3 +3,5 @@ engines:
     enabled: true
     language: c
 
+exclude_paths:
+  - 'docs/**'
