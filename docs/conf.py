@@ -1,8 +1,6 @@
-import subprocess, os, sys
+import subprocess, os
 
 from os.path import expanduser
-
-sys.path.append( expanduser("~") + "/.local/lib/python3.6/site-packages/" )
 
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
@@ -65,7 +63,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'c-test'
-copyright = '2017, Christophe Demko'
+copyright = '2017-2018, Christophe Demko'
 author = 'Christophe Demko'
 
 # The version info for the project you're documenting, acts as replacement for

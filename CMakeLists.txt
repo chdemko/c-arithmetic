@@ -15,3 +15,15 @@ add_subdirectory(src)
 add_subdirectory(test)
 add_subdirectory(docs)
 
+find_program(CMAKE_C_CPPCHECK NAMES cppcheck)
+if(CMAKE_C_CPPCHECK)
+    list(
+        APPEND CMAKE_C_CPPCHECK 
+            "--enable=warning"
+            "--inconclusive"
+            "--force" 
+            "--inline-suppr"
+            "--suppressions-list=${CMAKE_SOURCE_DIR}/CppCheckSuppressions.txt"
+    )
+endif()
+
