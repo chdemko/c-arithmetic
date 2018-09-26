@@ -27,7 +27,7 @@ script:
   - mkdir build
   - pushd build
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cmake .. -DBUILD_COVERAGE=1 -DTEST_VALGRIND=1 ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cmake .. ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cmake .. -G "Unix Makefiles" ; fi
   - make
   - make test
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then make coverage  ; fi
