@@ -15,3 +15,6 @@ add_subdirectory(src)
 add_subdirectory(test)
 add_subdirectory(docs)
 
+find_package(CppCheck)
+enable_cppcheck()
+
