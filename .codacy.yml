@@ -1,6 +1,5 @@
----
 engines:
- cppcheck:
-   enabled: true
-   language: c
+  cppcheck:
+    enabled: true
+    language: c
 
