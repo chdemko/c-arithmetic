@@ -1,10 +1,8 @@
-import subprocess, os
-
-from os.path import expanduser
+import os
 
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
-subprocess.call('cd ../src; doxygen', shell=True)
+os.system('cd ../src; doxygen')
 
 from recommonmark.parser import CommonMarkParser
 
@@ -46,7 +44,7 @@ source_parsers = {
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.imgmath', 'sphinx.ext.todo', 'breathe']
-breathe_projects = { "myproject": "doxygen/xml/" }
+breathe_projects = { "myproject": "../doxygen/xml/" }
 breathe_default_project = "myproject"
 
 # Add any paths that contain templates here, relative to this directory.
