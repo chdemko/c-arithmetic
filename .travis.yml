@@ -10,12 +10,12 @@ branches:
   - master
 
 before_install:
-  - sudo apt update
-  - sudo apt upgrade
   - sudo pip install --upgrade pip
-  - cmake --version
 
 install:
+  - cmake --version
+  - sudo apt install --only-upgrade cmake
+  - cmake --version
   - sudo apt-get install lcov
   - sudo apt-get install valgrind
   - sudo apt-get install cppcheck
