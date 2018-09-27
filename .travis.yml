@@ -10,7 +10,10 @@ branches:
   - master
 
 before_install:
+  - sudo apt update
+  - sudo apt upgrade
   - sudo pip install --upgrade pip
+  - cmake --version
 
 install:
   - sudo apt-get install lcov
