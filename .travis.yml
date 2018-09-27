@@ -13,9 +13,6 @@ before_install:
   - sudo pip install --upgrade pip
 
 install:
-  - cmake --version
-  - sudo apt install --only-upgrade cmake
-  - cmake --version
   - sudo apt-get install lcov
   - sudo apt-get install valgrind
   - sudo apt-get install cppcheck

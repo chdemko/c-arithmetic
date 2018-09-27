@@ -17,7 +17,7 @@ add_subdirectory(src)
 add_subdirectory(test)
 add_subdirectory(docs)
 
-if (CMAKE_C_CPPCHECK)
+if(CMAKE_C_CPPCHECK)
     list(
         APPEND CMAKE_C_CPPCHECK 
             "--language=c"
@@ -29,4 +29,5 @@ if (CMAKE_C_CPPCHECK)
             "--template='{file}:{line},{severity},{id},{message}'"
             "--error-exitcode=1"
     )
+    message(${CMAKE_C_CPPCHECK})
 endif()
