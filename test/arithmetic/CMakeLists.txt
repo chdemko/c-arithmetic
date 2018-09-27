@@ -2,16 +2,17 @@ include_directories(${CMAKE_SOURCE_DIR}/src)
 
 find_package(Valgrind)
 
-file(GLOB testSRC RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}"
-    "${CMAKE_CURRENT_SOURCE_DIR}/*.c"
+file(GLOB TEST_SRC
+    RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/test-*.c"
 )
 
-foreach(testFilename ${testSRC})
-  string(REPLACE ".c" "" testName ${testFilename})
-  add_executable(${testName} ${testFilename})
-  add_dependencies(${testName} arithmetic)
+foreach(TEST_FILE_NAME ${TEST_SRC})
+    string(REPLACE ".c" "" TEST_NAME ${TEST_FILE_NAME})
+    add_executable(${TEST_NAME} ${TEST_FILE_NAME})
+    add_dependencies(${TEST_NAME} arithmetic)
 
-  target_link_libraries(${testName} arithmetic)
+    target_link_libraries(${TEST_NAME} arithmetic)
 
-  valgrind_test(${testName} ./${testName})
-endforeach(testFilename ${testSRC})
+    valgrind_test(${TEST_NAME} ./${TEST_NAME})
+endforeach(TEST_FILE_NAME ${TEST_SRC})
