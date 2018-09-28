@@ -8,7 +8,7 @@
  * This file is part of the c-test package <https://github.com/chdemko/c-test>
  */
 
-#include "./arithmetic.h"
+#include "../numeric/arithmetic.h"
 
 unsigned int arithmetic_gcd(unsigned int a, unsigned int b) {
   while (b) {

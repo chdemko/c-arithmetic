@@ -20,7 +20,7 @@ install:
   - sudo pip install cpplint
 
 script:
-  - cpplint --repository=src/arithmetic/ src/arithmetic/*.c src/arithmetic/*.h test/arithmetic/*.c
+  - cpplint --repository=src/ src/numeric/*.c src/numeric/*.h test/numeric/*.c
   - mkdir build
   - pushd build
   - cmake .. -DBUILD_COVERAGE=1 -DTEST_VALGRIND=1

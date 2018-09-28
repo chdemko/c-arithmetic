@@ -8,8 +8,8 @@
  * This file is part of the c-test package <https://github.com/chdemko/c-test>
  */
 
-#ifndef ARITHMETIC_H_
-#define ARITHMETIC_H_
+#ifndef NUMERIC_ARITHMETIC_H_
+#define NUMERIC_ARITHMETIC_H_
 
 /**
  * arithmetic_gcd computes the Greatest Common Divisor of two positive integers.
@@ -33,5 +33,5 @@ extern unsigned int arithmetic_gcd(unsigned int a, unsigned int b);
  */
 extern unsigned int arithmetic_lcm(unsigned int a, unsigned int b);
 
-#endif  // ARITHMETIC_H_
+#endif  // NUMERIC_ARITHMETIC_H_
 
