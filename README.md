@@ -10,8 +10,8 @@ Installation
 ------------
 
 ~~~bash
-$ sudo apt cmake gcc cmake install lcov cppcheck pip valgrind
-$ pip install -r docs/requirements.txt
+$ sudo apt install cmake gcc cmake install lcov cppcheck pip valgrind
+$ sudo pip install -r docs/requirements.txt
 ~~~
 
 Usage
