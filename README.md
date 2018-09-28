@@ -6,6 +6,37 @@ c-test
 [![Coveralls](https://img.shields.io/coveralls/chdemko/c-test.svg)](https://coveralls.io/r/chdemko/c-test?branch=master)
 [![Documentation Status](https://readthedocs.org/projects/c-test/badge/?version=latest)](http://c-test.readthedocs.io/en/latest/?badge=latest)
 
+Installation
+------------
+
 ~~~bash
+$ sudo apt cmake gcc cmake install lcov cppcheck pip valgrind
 $ pip install -r docs/requirements.txt
 ~~~
+
+Usage
+-----
+
+### Compilation
+
+~~~bash
+$ mkdir build
+$ cd build
+$ cmake .. -DBUILD_COVERAGE=1 -DBUILD_HTML_COVERAGE=1 -DTEST_VALGRIND=1
+$ make
+~~~
+
+### Run test and code coverage
+
+~~~bash
+$ make test
+$ make coverage
+$ make html-coverage
+~~~
+
+### Build the docs
+
+~~~bash
+$ make docs
+~~~
+
