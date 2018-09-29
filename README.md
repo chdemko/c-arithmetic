@@ -10,9 +10,10 @@ Installation
 ------------
 
 ~~~bash
-$ git clone https://github.com/chdemko/c-test.git
 $ sudo apt install cmake gcc lcov cppcheck pip valgrind
 $ sudo pip install -r docs/requirements.txt
+$ git clone https://github.com/chdemko/c-test.git
+$ cd c-test
 ~~~
 
 Usage
