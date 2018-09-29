@@ -1,5 +1,5 @@
 /**
- * @file test-gcd.c
+ * @file test/numeric/test-gcd.c
  *
  * @author     Christophe Demko <chdemko@gmail.com>
  * @date       2017-2018

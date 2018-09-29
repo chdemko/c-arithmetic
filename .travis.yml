@@ -20,7 +20,7 @@ install:
   - sudo pip install cpplint
 
 script:
-  - cpplint --repository=src/ src/numeric/*.c src/numeric/*.h test/numeric/*.c
+  - cpplint --repository=src/ --recursive src/ test/
   - mkdir build
   - pushd build
   - cmake .. -DBUILD_COVERAGE=1 -DTEST_VALGRIND=1

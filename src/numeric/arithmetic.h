@@ -1,5 +1,5 @@
 /**
- * @file arithmetic.h
+ * @file src/numeric/arithmetic.h
  *
  * @author     Christophe Demko <chdemko@gmail.com>
  * @date       2017-2018

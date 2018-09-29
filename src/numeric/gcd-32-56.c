@@ -1,5 +1,5 @@
 /**
- * @file gcd-32-56.h
+ * @file src/numeric/gcd-32-56.h
  *
  * @author     Christophe Demko <chdemko@gmail.com>
  * @date       2017-2018

@@ -19,6 +19,12 @@ $ cd c-test
 Usage
 -----
 
+### Check style
+
+~~~bash
+$ cpplint --repository=src/ --recursive src/ test/
+~~~
+
 ### Compilation
 
 ~~~bash
