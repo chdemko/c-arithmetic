@@ -22,7 +22,7 @@ Usage
 ### Check style
 
 ~~~bash
-$ cpplint --repository=src/ --recursive src/ test/
+$ cclint --repository=src/ --recursive src/ test/
 ~~~
 
 ### Compilation

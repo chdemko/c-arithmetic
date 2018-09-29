@@ -17,10 +17,10 @@ install:
   - sudo apt-get install valgrind
   - sudo apt-get install cppcheck
   - gem install coveralls-lcov
-  - sudo pip install cpplint
+  - sudo pip install cclint
 
 script:
-  - cpplint --repository=src/ --recursive src/ test/
+  - cclint --repository=src/ --recursive src/ test/
   - mkdir build
   - pushd build
   - cmake .. -DBUILD_COVERAGE=1 -DTEST_VALGRIND=1
