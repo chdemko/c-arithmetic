@@ -1,6 +1,8 @@
-find_program(DOXYGEN doxygen)
+find_program(DOXYGEN_EXECUTABLE doxygen)
+mark_as_advanced(DOXYGEN_EXECUTABLE)
+
 find_package(Sphinx)
-if(SPHINX_EXECUTABLE AND DOXYGEN)
+if(SPHINX_EXECUTABLE AND DOXYGEN_EXECUTABLE)
 	add_custom_target(docs
 		COMMAND
 			${SPHINX_EXECUTABLE}

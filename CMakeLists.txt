@@ -10,10 +10,19 @@ set(PROJECT_VERSION ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
 enable_testing()
+
 find_package(CppCheck)
+enable_cppcheck()
+
+find_package(CcLint)
+enable_cclint()
 
 add_subdirectory(src)
 add_subdirectory(test)
 add_subdirectory(docs)
 
+set(CPACK_GENERATOR "ZIP")
+set(CPACK_SOURCE_GENERATOR "ZIP")
+set(CPACK_SOURCE_IGNORE_FILES "doxygen;.*/\\\\..*;~$;${CPACK_SOURCE_IGNORE_FILES}")
+include(CPack)
 

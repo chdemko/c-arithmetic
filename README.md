@@ -13,24 +13,17 @@ Installation
 $ sudo apt install cmake gcc lcov cppcheck pip valgrind
 $ sudo pip install -r docs/requirements.txt
 $ git clone https://github.com/chdemko/c-test.git
-$ cd c-test
 ~~~
 
 Usage
 -----
-
-### Check style
-
-~~~bash
-$ cclint --repository=src/ --recursive src/ test/
-~~~
 
 ### Compilation
 
 ~~~bash
 $ mkdir build
 $ cd build
-$ cmake .. -DBUILD_COVERAGE=1 -DBUILD_HTML_COVERAGE=1 -DTEST_VALGRIND=1
+$ cmake ../c-test -DBUILD_COVERAGE=1 -DBUILD_HTML_COVERAGE=1 -DUSE_VALGRIND=1 -DRUN_CPPCHECK=1
 $ make
 ~~~
 
@@ -42,9 +35,22 @@ $ make coverage
 $ make html-coverage
 ~~~
 
+### Check style
+
+~~~bash
+$ make cclint
+~~~
+
 ### Build the docs
 
 ~~~bash
 $ make docs
+~~~
+
+### Create archives
+
+~~~bash
+$ make package
+$ make package_source
 ~~~
 
