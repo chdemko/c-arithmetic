@@ -22,13 +22,12 @@ install:
 script:
   - cclint --repository=src/ --recursive src/ test/
   - mkdir build
-  - pushd build
+  - cd build
   - cmake .. -DBUILD_COVERAGE=1 -DTEST_VALGRIND=1
   - make
   - make test
   - make coverage
-  - popd
 
 after_success:
-  - coveralls-lcov build/coverage.info
+  - coveralls-lcov coverage.info
 
