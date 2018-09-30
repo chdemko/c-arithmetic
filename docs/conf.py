@@ -1,10 +1,10 @@
 import os
 
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-output_dir = os.environ.get('DOXYGEN_OUTPUT_DIR')
+output_dir = os.getenv('DOXYGEN_OUTPUT_DIR')
 
 if not output_dir:
-    os.environ['DOXYGEN_OUTPUT_DIR'] = os.environ.get('PWD') + '/doxygen'
+    os.environ['DOXYGEN_OUTPUT_DIR'] = os.getenv('PWD') + '/doxygen'
 
 os.system('cd ../src; doxygen')
 
@@ -48,7 +48,7 @@ source_parsers = {
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.imgmath', 'sphinx.ext.todo', 'breathe']
-breathe_projects = { "myproject": os.environ.get('DOXYGEN_OUTPUT_DIR') + "/xml/" }
+breathe_projects = { "myproject": os.getenv('DOXYGEN_OUTPUT_DIR') + "/xml/" }
 breathe_default_project = "myproject"
 
 # Add any paths that contain templates here, relative to this directory.
@@ -175,7 +175,7 @@ texinfo_documents = [
 ]
 
 if not output_dir:
-    os.environ.unsetenv('DOXYGEN_OUTPUT_DIR')
+    os.unsetenv('DOXYGEN_OUTPUT_DIR')
 
 
 
