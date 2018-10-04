@@ -10,7 +10,7 @@ Installation
 ------------
 
 ~~~bash
-$ sudo apt install cmake gcc lcov cppcheck pip valgrind
+$ sudo apt install cmake gcc lcov cppcheck pip valgrind flawfinder
 $ sudo pip install -r docs/requirements.txt
 $ git clone https://github.com/chdemko/c-test.git
 ~~~
@@ -39,6 +39,12 @@ $ make html-coverage
 
 ~~~bash
 $ make cclint
+~~~
+
+### Run flaw finder
+
+~~~bash
+$ make flawfinder
 ~~~
 
 ### Build the docs

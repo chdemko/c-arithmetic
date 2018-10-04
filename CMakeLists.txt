@@ -17,6 +17,9 @@ enable_cppcheck()
 find_package(CcLint)
 enable_cclint()
 
+find_package(FlawFinder)
+enable_flaw_finder()
+
 add_subdirectory(src)
 add_subdirectory(test)
 add_subdirectory(docs)
