@@ -60,3 +60,9 @@ $ make package
 $ make package_source
 ~~~
 
+### Install package
+
+~~~bash
+$ make install
+~~~
+

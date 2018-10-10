@@ -1,3 +1,5 @@
+set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
+
 add_library(arithmetic SHARED arithmetic.c arithmetic.h)
 add_library(arithmeticStatic STATIC arithmetic.c arithmetic.h)
 
@@ -5,6 +7,10 @@ set_target_properties (arithmeticStatic
 	PROPERTIES
 		OUTPUT_NAME arithmetic
 )
+
+add_executable(gcd gcd.c)
+add_dependencies(gcd arithmetic)
+target_link_libraries(gcd arithmetic arithmeticStatic)
 
 configure_file(
 	${CMAKE_CURRENT_SOURCE_DIR}/numeric.pc.in
@@ -29,7 +35,7 @@ install(
 )
 
 install(
-	TARGETS arithmetic arithmeticStatic
+	TARGETS arithmetic arithmeticStatic gcd
 	LIBRARY DESTINATION lib COMPONENT "Library"
 	ARCHIVE DESTINATION lib COMPONENT "Library"
 	RUNTIME DESTINATION bin COMPONENT "Runtime"
