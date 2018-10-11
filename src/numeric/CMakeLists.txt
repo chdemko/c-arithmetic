@@ -1,3 +1,4 @@
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH true)
 set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
 
 add_library(arithmetic SHARED arithmetic.c arithmetic.h)

@@ -8,12 +8,6 @@ if not output_dir:
 
 os.system('cd ../src; doxygen')
 
-from recommonmark.parser import CommonMarkParser
-
-source_parsers = {
-    '.md': CommonMarkParser,
-}
-
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
@@ -47,7 +41,7 @@ source_parsers = {
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.imgmath', 'sphinx.ext.todo', 'breathe']
+extensions = ['sphinx.ext.imgmath', 'sphinx.ext.todo', 'breathe', 'm2r']
 breathe_projects = { "myproject": os.getenv('DOXYGEN_OUTPUT_DIR') + "/xml/" }
 breathe_default_project = "myproject"
 

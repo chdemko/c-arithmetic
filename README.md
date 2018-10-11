@@ -1,5 +1,5 @@
-c-test
-======
+c-test project
+==============
 
 [![Travis](https://img.shields.io/travis/chdemko/c-test.svg)](http://travis-ci.org/chdemko/c-test)
 [![Codacy Badge](https://img.shields.io/codacy/grade/8cd40a98b85f4d4bbea18469cd062bb7.svg)](https://www.codacy.com/app/chdemko/c-test)

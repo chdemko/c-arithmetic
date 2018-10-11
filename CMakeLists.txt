@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(Arithmetic C)
+project(Numeric C)
 
 set(PROJECT_VERSION_MAJOR 0)
 set(PROJECT_VERSION_MINOR 0)

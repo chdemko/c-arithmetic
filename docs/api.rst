@@ -1,0 +1,5 @@
+API
+===
+
+.. doxygenfile:: arithmetic.h
+
