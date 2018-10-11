@@ -27,6 +27,6 @@ add_subdirectory(docs)
 
 set(CPACK_GENERATOR "ZIP")
 set(CPACK_SOURCE_GENERATOR "ZIP")
-set(CPACK_SOURCE_IGNORE_FILES "doxygen;.*/\\\\..*;~$;${CPACK_SOURCE_IGNORE_FILES}")
+set(CPACK_SOURCE_IGNORE_FILES ".*/\\\\..*;~$;${CPACK_SOURCE_IGNORE_FILES}")
 include(CPack)
 
