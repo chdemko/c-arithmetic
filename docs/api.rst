@@ -1,5 +1,8 @@
-API
-===
+Application Programming Interface
+=================================
 
-.. doxygenfile:: arithmetic.h
+.. toctree::
+   :maxdepth: 2
+
+   Arithmetic <arithmetic>
 

@@ -10,8 +10,8 @@ Welcome to c-test's documentation!
    :maxdepth: 2
    :caption: Contents
 
-   README
-   api
+   Introduction <README>
+   Application Programming Interface <api>
 
 Indices and tables
 ==================
