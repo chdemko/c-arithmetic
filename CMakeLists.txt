@@ -18,6 +18,9 @@ enable_cppcheck()
 find_package(CcLint)
 enable_cclint()
 
+find_package(ClangFormat)
+enable_clang_format()
+
 find_package(FlawFinder)
 enable_flaw_finder()
 

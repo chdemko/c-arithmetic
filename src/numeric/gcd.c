@@ -1,13 +1,3 @@
-/**
- * @file src/numeric/gcd.c
- *
- * @author     Christophe Demko <chdemko@gmail.com>
- * @date       2017-2018
- * @copyright  BSD 3-Clause License
- *
- * This file is part of the c-test package <https://github.com/chdemko/c-test>
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -27,4 +17,3 @@ int main(int argc, char** argv) {
   }
   return EXIT_SUCCESS;
 }
-
