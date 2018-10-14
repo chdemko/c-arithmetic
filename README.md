@@ -11,8 +11,8 @@ Installation
 
 ~~~bash
 $ sudo apt install cmake gcc lcov cppcheck pip valgrind flawfinder
-$ [sudo] pip install [--user] -r docs/requirements.txt
 $ git clone https://github.com/chdemko/c-test.git
+$ [sudo] pip install [--user] -r c-test/docs/requirements.txt
 ~~~
 
 Usage
