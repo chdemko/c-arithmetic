@@ -10,7 +10,7 @@ Installation
 ------------
 
 ~~~bash
-$ sudo apt install cmake gcc lcov cppcheck pip valgrind flawfinder doxygen dot
+$ sudo apt install cmake gcc lcov cppcheck python-pip valgrind flawfinder doxygen dot
 $ git clone https://github.com/chdemko/c-test.git
 $ [sudo] pip install [--user] -r c-test/docs/requirements.txt
 ~~~
