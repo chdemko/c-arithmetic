@@ -15,7 +15,7 @@ if(SPHINX_EXECUTABLE AND DOXYGEN_EXECUTABLE)
 	)
 
 	add_custom_command(TARGET docs POST_BUILD
-		COMMENT "HTML documentation is in ${CMAKE_CURRENT_BINARY_DIR}"
+		COMMENT "HTML documentation is in ${CMAKE_CURRENT_BINARY_DIR}/html"
 	)
 
 	install(
