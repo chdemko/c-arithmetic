@@ -9,7 +9,7 @@ c-test project
 Installation
 ------------
 
-Use brew and not apt if you are on mac !
+Use `brew` and not `apt` if you are on macos!
 
 ~~~bash
 $ sudo apt install cmake gcc lcov cppcheck python-pip valgrind flawfinder doxygen dot
@@ -25,7 +25,7 @@ Usage
 ~~~bash
 $ mkdir build
 $ cd build
-$ cmake ../../c-test-master -DBUILD_COVERAGE=1 -DBUILD_HTML_COVERAGE=1 -DUSE_VALGRIND=1 -DRUN_CPPCHECK=1
+$ cmake ../c-test -DBUILD_COVERAGE=1 -DBUILD_HTML_COVERAGE=1 -DUSE_VALGRIND=1 -DRUN_CPPCHECK=1
 $ make
 ~~~
 
