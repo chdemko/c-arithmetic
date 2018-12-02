@@ -169,8 +169,5 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-if not output_dir:
-    os.unsetenv('DOXYGEN_OUTPUT_DIR')
-
-
+intersphinx_mapping = {'https://docs.python.org/': None}
 
