@@ -37,12 +37,12 @@ os.system('cd ../src; doxygen')
 # If your documentation needs a minimal Sphinx version, state it here.
 #
 # needs_sphinx = '1.0'
-needs_sphinx = '2.2'
+needs_sphinx = '3.0'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.imgmath', 'sphinx.ext.todo', 'breathe', 'm2r']
+extensions = ['sphinx.ext.imgmath', 'sphinx.ext.todo', 'breathe', 'recommonmark']
 breathe_projects = { "myproject": os.getenv('DOXYGEN_OUTPUT_DIR') + "/xml/" }
 breathe_default_project = "myproject"
 
@@ -60,7 +60,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'c-test'
-copyright = '2017-2018, Christophe Demko'
+copyright = '2017-2020, Christophe Demko'
 author = 'Christophe Demko'
 
 # The version info for the project you're documenting, acts as replacement for
