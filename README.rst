@@ -1,7 +1,7 @@
 c-test project
 ==============
 
-|Coveralls| |Documentation Status|
+|cmake| |Coveralls| |Documentation Status|
 
 Installation
 ------------
@@ -72,6 +72,8 @@ Install package
 
    $ make install
 
+.. |cmake| image:: ![cmake](https://github.com/chdemko/c-test/actions/workflows/cmake.yml/badge.svg)
+   :target: https://github.com/chdemko/c-test/actions
 .. |Coveralls| image:: https://img.shields.io/coveralls/chdemko/c-test.svg
    :target: https://coveralls.io/r/chdemko/c-test?branch=master
 .. |Documentation Status| image:: https://img.shields.io/readthedocs/c-test.svg
