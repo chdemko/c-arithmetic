@@ -30,7 +30,7 @@ jobs:
       run: sudo apt-get install cppcheck
     
     - name: Install coveralls-lcov
-      run: gem install coveralls-lcov
+      run: sudo gem install coveralls-lcov
     
     - name: Install cclint
       run: sudo pip install cclint
