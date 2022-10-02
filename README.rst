@@ -1,7 +1,7 @@
 c-test project
 ==============
 
-|Travis| |Codacy Badge| |Coveralls| |Documentation Status|
+|Coveralls| |Documentation Status|
 
 Installation
 ------------
@@ -72,10 +72,6 @@ Install package
 
    $ make install
 
-.. |Travis| image:: https://img.shields.io/travis/chdemko/c-test.svg
-   :target: http://travis-ci.org/chdemko/c-test
-.. |Codacy Badge| image:: https://img.shields.io/codacy/grade/8cd40a98b85f4d4bbea18469cd062bb7.svg
-   :target: https://www.codacy.com/app/chdemko/c-test
 .. |Coveralls| image:: https://img.shields.io/coveralls/chdemko/c-test.svg
    :target: https://coveralls.io/r/chdemko/c-test?branch=master
 .. |Documentation Status| image:: https://img.shields.io/readthedocs/c-test.svg
