@@ -29,6 +29,9 @@ jobs:
     - name: Install cppcheck
       run: sudo apt-get install cppcheck
 
+    - name: Install flawfinder
+      run: sudo apt-get install flawfinder
+
     - name: Install coveralls-lcov
       run: sudo gem install coveralls-lcov
 
