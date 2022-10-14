@@ -9,7 +9,7 @@
  *
  * @return the Greatest Common Divisor of a and b
  *
- * @note the Greatest Common Divisor of 0 and 0 is computed as 0
+ * @note the Greatest Common Divisor of `0` and `0` is computed as `0`
  */
 extern unsigned int arithmetic_gcd(unsigned int a, unsigned int b);
 
