@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 3.0)
 
 project(Numeric C)
 
-cmake_policy(SET CMP0110 OLD)
+if(${CMAKE_VERSION} GREATER_EQUAL "3.19")
+  cmake_policy(SET CMP0110 NEW)
+endif()
 
 set(PROJECT_VERSION_MAJOR 0)
 set(PROJECT_VERSION_MINOR 0)
