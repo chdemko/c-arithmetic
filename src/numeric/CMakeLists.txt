@@ -4,10 +4,7 @@ set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
 add_library(arithmetic SHARED arithmetic.c arithmetic.h)
 add_library(arithmeticStatic STATIC arithmetic.c arithmetic.h)
 
-set_target_properties (arithmeticStatic
-	PROPERTIES
-		OUTPUT_NAME arithmetic
-)
+set_target_properties(arithmeticStatic PROPERTIES OUTPUT_NAME arithmetic)
 
 add_executable(gcd gcd.c)
 add_dependencies(gcd arithmetic)
