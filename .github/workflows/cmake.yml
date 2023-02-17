@@ -65,8 +65,6 @@ jobs:
       working-directory: ${{github.workspace}}/build
       run: make coverage
 
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.COVERALLS_TOKEN }}
-        path-to-lcov: ${{github.workspace}}/build/coverage.info
+    - name: Post coverage
+      working-directory: ${{github.workspace}}/build
+      run: coveralls-lcov --repo-token=${{secrets.COVERALLS_TOKEN}} coverage.info
