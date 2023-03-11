@@ -8,7 +8,7 @@ Installation
 
 Use ``brew`` and not ``apt`` if you are on macos!
 
-.. code:: bash
+.. code:: shell-session
 
    $ sudo apt install cmake gcc lcov cppcheck python-pip valgrind flawfinder doxygen dot
    $ git clone https://github.com/chdemko/c-arithmetic.git
@@ -20,17 +20,21 @@ Usage
 Compilation
 ~~~~~~~~~~~
 
-.. code:: bash
+.. code:: shell-session
 
    $ mkdir build
    $ cd build
-   $ cmake ../c-arithmetic -DBUILD_COVERAGE=1 -DBUILD_HTML_COVERAGE=1 -DUSE_VALGRIND=1 -DRUN_CPPCHECK=1
+   $ cmake ../c-arithmetic \
+       -DBUILD_COVERAGE=1 \
+       -DBUILD_HTML_COVERAGE=1 \
+       -DUSE_VALGRIND=1 \
+       -DRUN_CPPCHECK=1
    $ make
 
 Run test and code coverage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: bash
+.. code:: shell-session
 
    $ make test
    $ make coverage
@@ -39,28 +43,28 @@ Run test and code coverage
 Check style
 ~~~~~~~~~~~
 
-.. code:: bash
+.. code:: shell-session
 
    $ make cclint
 
 Run flaw finder
 ~~~~~~~~~~~~~~~
 
-.. code:: bash
+.. code:: shell-session
 
    $ make flawfinder
 
 Build the docs
 ~~~~~~~~~~~~~~
 
-.. code:: bash
+.. code:: shell-session
 
    $ make docs
 
 Create archives
 ~~~~~~~~~~~~~~~
 
-.. code:: bash
+.. code:: shell-session
 
    $ make package
    $ make package_source
@@ -68,7 +72,7 @@ Create archives
 Install package
 ~~~~~~~~~~~~~~~
 
-.. code:: bash
+.. code:: shell-session
 
    $ make install
 
