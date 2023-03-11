@@ -1,5 +1,0 @@
-Arithmetic
-==========
-
-.. doxygenfile:: arithmetic.h
-
