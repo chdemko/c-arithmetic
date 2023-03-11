@@ -11,7 +11,7 @@ os.system('cd ../src; doxygen')
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# c-test documentation build configuration file, created by
+# c-arithmetic documentation build configuration file, created by
 # sphinx-quickstart on Mon Apr 10 11:17:08 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -59,7 +59,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = 'c-test'
+project = 'c-arithmetic'
 copyright = '2017-2023, Christophe Demko'
 author = 'Christophe Demko'
 
@@ -116,7 +116,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'c-testdoc'
+htmlhelp_basename = 'c-arithmeticdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -143,7 +143,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'c-test.tex', 'c-test Documentation',
+    (master_doc, 'c-arithmetic.tex', 'c-arithmetic Documentation',
      'Christophe Demko', 'manual'),
 ]
 
@@ -153,7 +153,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'c-test', 'c-test Documentation',
+    (master_doc, 'c-arithmetic', 'c-arithmetic Documentation',
      [author], 1)
 ]
 
@@ -164,8 +164,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'c-test', 'c-test Documentation',
-     author, 'c-test', 'One line description of project.',
+    (master_doc, 'c-arithmetic', 'c-arithmetic Documentation',
+     author, 'c-arithmetic', 'One line description of project.',
      'Miscellaneous'),
 ]
 
