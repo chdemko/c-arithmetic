@@ -59,13 +59,12 @@ jobs:
       run: make flawfinder
 
     - name: Coverage
-      working-directory: ${{github.workspace}}/build
+      working-directory: 
       run: make coverage
 
     - name: Coveralls
       uses: coverallsapp/github-action@v2
-      working-directory: ${{github.workspace}}/build
       with:
-        file: coverage.info
+        file: ${{github.workspace}}/build/coverage.info
         github-token: ${{secrets.COVERALLS_TOKEN}}
 
