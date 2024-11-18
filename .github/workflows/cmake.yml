@@ -32,9 +32,6 @@ jobs:
     - name: Install flawfinder
       run: sudo apt-get install flawfinder
 
-    - name: Install coveralls-lcov
-      run: sudo gem install coveralls-lcov
-
     - name: Install cclint
       run: sudo pip install cclint
 
@@ -65,6 +62,8 @@ jobs:
       working-directory: ${{github.workspace}}/build
       run: make coverage
 
-    - name: Post coverage
-      working-directory: ${{github.workspace}}/build
-      run: coveralls-lcov --repo-token=${{secrets.COVERALLS_TOKEN}} coverage.info
+    - name: Coveralls
+      uses: coverallsapp/github-action@v2
+      file: ${{github.workspace}}/build/coverage.info
+      github-token: ${{secrets.COVERALLS_TOKEN}}
+

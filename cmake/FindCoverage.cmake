@@ -14,6 +14,7 @@ function(enable_coverage)
   if(BUILD_COVERAGE)
     add_custom_target(coverage
       ${COVERAGE_EXECUTABLE}
+        --base-directory ${CMAKE_SOURCE_DIR}
         --directory ${CMAKE_CURRENT_BINARY_DIR}
         --capture
         --output-file ${CMAKE_CURRENT_BINARY_DIR}/coverage.info

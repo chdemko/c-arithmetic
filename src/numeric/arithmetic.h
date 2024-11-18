@@ -1,4 +1,6 @@
 /**
+ * @module numeric/arithmetic
+ *
  * @author     Christophe Demko <christophe.demko@univ-lr.fr>
  * @date       2011-2024
  * @copyright  BSD 3-Clause License
