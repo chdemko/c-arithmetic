@@ -59,7 +59,7 @@ jobs:
       run: make flawfinder
 
     - name: Coverage
-      working-directory: 
+      working-directory: ${{github.workspace}}/build
       run: make coverage
 
     - name: Coveralls
