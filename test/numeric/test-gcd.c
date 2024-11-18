@@ -1,10 +1,15 @@
+/**
+ * @author     Christophe Demko <christophe.demko@univ-lr.fr>
+ * @date       2011-2024
+ * @copyright  BSD 3-Clause License
+ */
+
 #include <stdlib.h>
 
 #ifdef NDEBUG
 #undef NDEBUG
 #endif
 #include <assert.h>
-
 #include <numeric/arithmetic.h>
 
 int main(void) {

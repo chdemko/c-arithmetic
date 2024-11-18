@@ -1,3 +1,9 @@
+/**
+ * @author     Christophe Demko <christophe.demko@univ-lr.fr>
+ * @date       2011-2024
+ * @copyright  BSD 3-Clause License
+ */
+
 #include "../numeric/arithmetic.h"
 
 unsigned int arithmetic_gcd(unsigned int a, unsigned int b) {
