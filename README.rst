@@ -13,6 +13,7 @@ Use ``brew`` and not ``apt`` if you are on macos!
    $ sudo apt install cmake gcc lcov cppcheck python-pip valgrind flawfinder doxygen dot
    $ git clone https://github.com/chdemko/c-arithmetic.git
    $ [sudo] pip install [--user] -r c-arithmetic/docs/requirements.txt
+   $ [sudo] pip install [--user] cclint
 
 Usage
 -----
